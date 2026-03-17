@@ -1,0 +1,80 @@
+{
+
+    "nav":{
+         "home": "Home",
+        "about": "About",
+        "experience": "Experience",
+        "contact": "Contact"
+        },
+    "experience":{
+        "title": "Experience",
+        "position": [
+            {   
+                "title": "Front End Developer, Team Lead",
+                "company": "TD Bank - Canada",
+                "dates": "Jan 2016 - March 2026",
+                "description": [
+                    "Develop web based product for one of the leading bank in Canada on an Angular 19+ and AngularJS (1.2xx) platform",
+                    "Create a modular system with a micro frontend for optimized and fast code changes/deployment",
+                    "Train/integrate new developers to help with product support",
+                    "Led frontend hiring and technical interviews",
+                    "Defined project-wide framework and standards"
+                ],
+                "images": [
+                    "assets/img/td-app.jpg",
+                    "assets/img/td-app2.jpg"
+                ]
+            },
+            {
+                "title": "UI Front End Developer, Team Lead",
+                "company": "Instream Solutions",
+                "dates": "Oct 2013 - Jan 2016",
+                "description": [
+                    "Software startup consulting company, handles multiple projects from a wide range of clients",
+                    "Develop and support Instream Financial application using JavaScript/AngularJS",
+                    "Plan and implement new and improved front end framework applications (MVC, MVVC)"
+                ]
+            }
+            
+        ]
+    },
+    "education":{
+        "title": "Education",
+        "degree": "Bachelor of Science",
+        "major": "Computer Science",
+        "school": "Carleton University of Ottawa",
+        "dates": "2002 - 2007"
+    },
+    "skills": {
+        "title": "Skills",
+        "skillsset": [
+            {
+                "section": "Testing",
+                "sks": [
+                    "​Jasmine, ​Karma",
+                    "Unit testing, E2E testing",
+                    "Test driven development (TDD)"
+                ]
+            },
+            
+            {
+                "section": "Architecture / Design",
+                "sks": [
+                    "Micro Frontend, Microservice",
+                    "Lazy loading / Early loading",
+                    "Responsive Design",
+                    "Multi Language , OSCommerce, Financial Application, Banking Platform",
+                    "Accessibility A, AA, W3C, Banking financial standards",
+                    "State management, Component design"
+                ]
+            }
+            
+            
+            
+        ],
+        "workflow": [
+            "Agile Development & Scrum"
+        ]
+    }
+
+}

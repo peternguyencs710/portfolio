@@ -1,0 +1,12 @@
+/* Styles for the Experience component */
+.work-img {
+    width:200px;
+    height:200px;
+    padding-right:30px;
+    cursor:pointer;
+    &:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s ease-in-out;
+       
+    }
+}

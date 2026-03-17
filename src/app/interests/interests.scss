@@ -1,0 +1,11 @@
+.interest-img {
+    width: 100px;
+    height: 100px;
+    padding:20px;
+    cursor:pointer;
+    &:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s ease-in-out;
+       
+    }
+}

@@ -1,0 +1,15 @@
+{
+
+    "nav":{
+         "home": "Home",
+        "about": "About",
+        "experience": "Experience",
+        "contact": "Contact"
+        },
+   "experience":{
+        "title": "Experience",
+        "description": "I have experience in various technologies and frameworks, including Angular, React, and Node.js. I have worked on several projects that involved building responsive web applications and RESTful APIs. I am always eager to learn new technologies and improve my skills."
+   }
+    
+
+}
