@@ -1,6 +1,13 @@
 <section class="resume-section" id="projects">
     <div class="resume-section-content">
-        <h2 class="mb-5">Projects</h2>
-        <p>Here are some of my recent projects.</p>
+        @if (!store.loading()) {
+          <app-todos-list></app-todos-list>
+        } @else {
+            <div style="display: flex; justify-content: center;">
+                <h2>Loading Table&nbsp;&nbsp;</h2>
+                <mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
+
+            </div>
+        }
     </div>
 </section>

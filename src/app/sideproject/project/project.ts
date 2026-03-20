@@ -1,20 +1,27 @@
 import { Component, inject } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
-import { ImageModalComponent } from '../../image-modal/image-modal';
+
+import { TodosStore } from '../../store/todos.store';
+import { JsonPipe } from '@angular/common';
+import { TodosListComponent } from '../todos-list/todos-list';
+import { MatProgressSpinner } from '@angular/material/progress-spinner';
 
 @Component({
   standalone: true,
   selector: 'app-project',
+  imports: [JsonPipe, TodosListComponent, MatProgressSpinner],
   templateUrl: './project.html',
   styleUrl: './project.scss',
 })
 export class ProjectComponent {
-    private dialog = inject(MatDialog);
+
+    public store = inject(TodosStore);
     constructor() {}
-    
-    openImageModal(imageUrl: string) {
-        this.dialog.open(ImageModalComponent, {
-            data: { imageUrl: imageUrl }
-        });
+
+    ngOnInit() {
+        this.loadTodos().then(() => { console.log('Todos loaded'); });  
+    }
+
+    async loadTodos() {
+        await this.store.loadAll();
     }
 }
