@@ -2,11 +2,11 @@ import { Component, inject } from '@angular/core';
 import {TranslateService} from "@ngx-translate/core";
 import { CommonModule } from '@angular/common';
 @Component({
-  standalone: true,
+standalone: true,
+imports: [CommonModule],
   selector: 'app-skills',
   templateUrl: './skills.html',
   styleUrl: './skills.scss',
-  imports: [CommonModule]
 })
 export class SkillsComponent {
     private translate = inject(TranslateService);
