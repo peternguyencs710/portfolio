@@ -112,10 +112,10 @@ export class ReactiveFormComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     // option 1
-    this.subscription.unsubscribe();
-    this.subscriptionList.forEach(sub => { sub.unsubscribe});
+    //this.subscription.unsubscribe();
+    //this.subscriptionList.forEach(sub => { sub.unsubscribe});
 
     //option 2 
-    this.subTakenUntill.next();
+    //this.subTakenUntill.next();
   }
 }

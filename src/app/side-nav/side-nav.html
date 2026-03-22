@@ -14,7 +14,7 @@
       <li class="nav-item"><a class="nav-link js-scroll-trigger" routerLink="portfolio" fragment="interests">Interests</a></li>
       <li class="nav-item"><a class="nav-link js-scroll-trigger" routerLink="projects" (click)="toggleProjectNav()">Projects/Tutorial</a></li>
     } @else {
-      <li class="nav-item"><a class="nav-link js-scroll-trigger" routerLink="portfolio" fragment="about" (click)="toggleProjectNav()">Portfolio</a></li>
+      <li class="nav-item"><a class="nav-link js-scroll-trigger" routerLink="portfolio" (click)="toggleProjectNav()">Portfolio</a></li>
       <li class="nav-item"><a class="nav-link js-scroll-trigger" routerLink="projects" fragment="ngrxstore">NgRX Signal store</a></li>
       <li class="nav-item"><a class="nav-link js-scroll-trigger" routerLink="projects" fragment="rxjsform">RxJs with Reactive Form</a></li>
     }
