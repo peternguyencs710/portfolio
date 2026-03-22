@@ -67,6 +67,16 @@
                     "Accessibility A, AA, W3C, Banking financial standards",
                     "State management, Component design"
                 ]
+            },
+
+            {
+                "section": "Library",
+                "sks": [
+                    "RxJS",
+                    "NgRx",
+                    "Angular Material",
+                    "Ngx translate"
+                ]
             }
             
             

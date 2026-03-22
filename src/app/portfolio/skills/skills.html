@@ -17,16 +17,18 @@
                         <li class="list-inline-item"><i class="fab fa-npm"></i></li>
                         <li class="list-inline-item"><i class="fab fa-docker"></i></li>
                     </ul>
-                    <div  *ngFor="let skill of skillset">
-                        
-                        <p class="subheading mb-3">{{ skill.section }}</p>
-                        <ul>
+                 
+                    <div class="listcontainer">
+                        <div class="listcolumn" *ngFor="let skill of skillset">
+                            <p class="subheading mb-3">{{ skill.section }}</p>
+                             <ul>
                             <li *ngFor="let sk of skill.sks">
                                 <!-- <span class="fa-li"><i class="fas fa-check"></i></span> -->
                                 <span class="small">{{ sk }}</span>
                             </li>
                             
                         </ul>
-                    </div>
+                        </div>
+                    </div>  
                 </div>
             </section>

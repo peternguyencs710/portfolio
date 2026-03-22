@@ -5,7 +5,7 @@ import { CommonModule } from '@angular/common';
 
 @Component({
   standalone: true,
-  imports: [CommonModule, ImageModalComponent],
+  imports: [CommonModule],
   selector: 'app-interests',
   templateUrl: './interests.html',
   styleUrl: './interests.scss',

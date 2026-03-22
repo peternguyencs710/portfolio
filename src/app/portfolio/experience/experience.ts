@@ -7,7 +7,7 @@ import { CommonModule } from '@angular/common';
 
 @Component({
   standalone: true,
-  imports: [CommonModule, TranslatePipe, ImageModalComponent],
+  imports: [CommonModule, TranslatePipe],
   selector: 'app-experience',
   templateUrl: './experience.html',
   styleUrl: './experience.scss',

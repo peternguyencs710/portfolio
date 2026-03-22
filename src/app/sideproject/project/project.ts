@@ -9,7 +9,7 @@ import { ReactiveFormComponent } from '../reactive-form/reactive-form';
 @Component({
   standalone: true,
   selector: 'app-project',
-  imports: [JsonPipe, TodosListComponent, MatProgressSpinner, ReactiveFormComponent],
+  imports: [TodosListComponent, MatProgressSpinner, ReactiveFormComponent],
   templateUrl: './project.html',
   styleUrl: './project.scss',
 })

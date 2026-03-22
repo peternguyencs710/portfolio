@@ -13,7 +13,7 @@ import { TodoFilter, TodosStore } from '../../store/todos.store';
   selector: 'app-todos-list',
   standalone: true,
   imports: [FormsModule, CommonModule, 
-    MatFormField, MatInput, MatIcon, MatSuffix, MatButton,
+    MatFormField, MatInput, MatIcon, MatSuffix,
     MatLabel, MatButtonToggleGroup, MatButtonToggle, MatSelectionList, MatListOption
 
   ],
