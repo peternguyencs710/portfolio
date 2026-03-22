@@ -20,3 +20,24 @@
   color: red;
   cursor: pointer;
 }
+
+.listcontainer {
+  display: flex; /* Makes the children flex items arranged in a row by default */
+  gap: 20px;     /* Adds a gap between columns for spacing */
+}
+
+.listcolumn {
+  flex: 1;       /* Makes both columns take up equal horizontal space */
+  padding: 1rem; /* Adds inner spacing */
+}
+
+/* Optional: Add responsiveness so columns stack on mobile */
+@media (max-width: 768px) {
+  .listcontainer {
+    gap: 0;
+    flex-direction: column; /* Stacks columns vertically on small screens */
+  }
+  .listcolumn {
+      padding: 0;
+  }
+}

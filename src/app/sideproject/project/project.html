@@ -2,6 +2,8 @@
     <div class="resume-section-content">
         @if (!store.loading()) {
           <app-todos-list></app-todos-list>
+          <hr class="m-0" />
+          <app-reactive-form></app-reactive-form>
         } @else {
             <div style="display: flex; justify-content: center;">
                 <h2>Loading Table&nbsp;&nbsp;</h2>

@@ -9,7 +9,7 @@ import { Todo } from "../model/todo.model";
 export class TodoService {
     async getTodos() {
         // Simulate an API call with a delay    
-        await sleep(5000); // Simulate network delay
+        await sleep(1000); // Simulate network delay
         return TODOS;  
     }
 

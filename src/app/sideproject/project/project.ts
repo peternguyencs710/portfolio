@@ -4,11 +4,12 @@ import { TodosStore } from '../../store/todos.store';
 import { JsonPipe } from '@angular/common';
 import { TodosListComponent } from '../todos-list/todos-list';
 import { MatProgressSpinner } from '@angular/material/progress-spinner';
+import { ReactiveFormComponent } from '../reactive-form/reactive-form';
 
 @Component({
   standalone: true,
   selector: 'app-project',
-  imports: [JsonPipe, TodosListComponent, MatProgressSpinner],
+  imports: [JsonPipe, TodosListComponent, MatProgressSpinner, ReactiveFormComponent],
   templateUrl: './project.html',
   styleUrl: './project.scss',
 })
