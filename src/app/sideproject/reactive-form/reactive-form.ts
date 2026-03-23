@@ -3,6 +3,7 @@ import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angula
 import { AsyncPipe, CommonModule, JsonPipe } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Subscription, Subject, takeUntil, take, Observable } from 'rxjs';
+import { signal } from '@angular/core';
 @Component({
   selector: 'app-reactive-form',
   standalone: true,
@@ -12,8 +13,8 @@ import { Subscription, Subject, takeUntil, take, Observable } from 'rxjs';
 })
 export class ReactiveFormComponent implements OnInit, OnDestroy {
   form!: FormGroup;
-  submitted = false;
-  loadData = false;
+  submitted = signal(false);
+  loadData = signal(false);
   http = inject(HttpClient);
   //memomery managment of subscribe
   // option 1
@@ -92,22 +93,22 @@ export class ReactiveFormComponent implements OnInit, OnDestroy {
 
     //option 4 uses Observable
     this.formData$ = this.http.get('./assets/download/mockFormData.json')
-    this.loadData = true;
+    this.loadData.update(value => value = true);
   }
 
   onSubmit() {
-    this.submitted = true;
+    this.submitted.update(value => value = true);
     if (this.form.valid) {
       console.log('Form Value:', this.form.value);
       this.form.reset();
-      this.submitted = false;
+      this.submitted.update(value => value = false);
     }
   }
 
   resetForm() {
     this.form.reset();
-    this.loadData = false;
-    this.submitted = false;
+    this.loadData.update(value => value = false);
+    this.submitted.update(value => value = false);
   }
 
   ngOnDestroy() {

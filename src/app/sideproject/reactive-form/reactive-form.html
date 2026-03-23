@@ -34,9 +34,9 @@
               class="form-control"
               id="name"
               formControlName="name"
-              [class.is-invalid]="submitted && name?.invalid"
+              [class.is-invalid]="submitted() && name?.invalid"
             />
-            @if (submitted && name?.invalid) {
+            @if (submitted() && name?.invalid) {
               <div class="invalid-feedback d-block">
                 @if (name?.errors?.['required']) {
                   <span>Name is required</span>
@@ -55,9 +55,9 @@
               class="form-control"
               id="email"
               formControlName="email"
-              [class.is-invalid]="submitted && email?.invalid"
+              [class.is-invalid]="submitted() && email?.invalid"
             />
-            @if (submitted && email?.invalid) {
+            @if (submitted() && email?.invalid) {
               <div class="invalid-feedback d-block">
                 @if (email?.errors?.['required']) {
                   <span>Email is required</span>
@@ -76,9 +76,9 @@
               id="message"
               rows="4"
               formControlName="message"
-              [class.is-invalid]="submitted && message?.invalid"
+              [class.is-invalid]="submitted() && message?.invalid"
             ></textarea>
-            @if (submitted && message?.invalid) {
+            @if (submitted() && message?.invalid) {
               <div class="invalid-feedback d-block">
                 @if (message?.errors?.['required']) {
                   <span>Message is required</span>
@@ -127,7 +127,7 @@
           </ul>
         </code>
         <div>
-          @if (loadData) {
+          @if (loadData()) {
             <div *ngIf="formData$ | async as data">
               <p>Loading data using asyncPipe</p>
               {{ data | json }}
